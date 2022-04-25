@@ -2,8 +2,6 @@ package prob3;
 
 import java.util.Scanner;
 
-import javax.imageio.plugins.tiff.BaselineTIFFTagSet;
-
 public class Prob3 {
 	public static int oddEvenMethod(int value) {
 		if(value % 2 == 0) {
