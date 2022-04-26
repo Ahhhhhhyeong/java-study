@@ -16,7 +16,24 @@ public class Prob05 {
 			Random random = new Random();
 			int correctNumber = random.nextInt( 100 ) + 1;
 			System.out.println(correctNumber);
-
+			int i = 0;
+			while(true) {
+				i++;
+				System.out.print(i + ">>");
+				int input = scanner.nextInt();
+				if(correctNumber == input) {
+					break;
+				}
+				
+				if(correctNumber > input) {
+					System.out.println("더 높게");
+				}
+				
+				if(correctNumber < input) {
+					System.out.println("더 낮게");
+				}
+			}
+			
 			
 			//새 게임 여부 확인하기
 			System.out.print( "다시 하겠습니까(y/n)>>" );
