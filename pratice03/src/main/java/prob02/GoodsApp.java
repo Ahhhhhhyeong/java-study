@@ -25,8 +25,8 @@ public class GoodsApp {
 		}
 		
 		// 상품 출력
-		for(int i = 0; i < COUNT_GOODS; i++) {
-			goods[i].showGoods();
+		for(Goods goods2 : goods) {
+			goods2.showGoods();
 		}
 		// 자원정리
 		scanner.close();
