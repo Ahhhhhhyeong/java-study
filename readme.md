@@ -1,12 +1,7 @@
 # Java Study
 
 ### chapter03
-* 객체지향 프로그래밍 수업 예제   
-	1. [chapter03_Goods](https://github.com/Ahhhhhhyeong/java-study/blob/master/chapter03/src/main/java/chapter03/Goods.java)     
-	2. [chapter03_GoodsApp](https://github.com/Ahhhhhhyeong/java-study/blob/master/chapter03/src/main/java/chapter03/GoodsApp.java)   
-	3. [mypackage_Goods2](https://github.com/Ahhhhhhyeong/java-study/blob/master/chapter03/src/main/java/mypackage/Goods2.java)   
-	4. [chapter03_GoodsApp2](https://github.com/Ahhhhhhyeong/java-study/blob/master/chapter03/src/main/java/chapter03/GoodsApp2.java)   
-	5. [chapter03_EventGoods2](https://github.com/Ahhhhhhyeong/java-study/blob/master/chapter03/src/main/java/chapter03/EventGoods2.java)   
+* [객체지향 프로그래밍 수업 예제](https://github.com/Ahhhhhhyeong/java-study/tree/master/chapter03/src/main/java/chapter03)
 
 ### chapter04
 * Java API(java.lang.*, java.util.* , java.io.*) 수업 예제
@@ -35,7 +30,7 @@
 	1. [prob1](https://github.com/Ahhhhhhyeong/java-study/tree/master/pratice03/src/main/java/prob01)   
 	2. [prob2](https://github.com/Ahhhhhhyeong/java-study/tree/master/pratice03/src/main/java/prob02)   
 	3. [prob3](https://github.com/Ahhhhhhyeong/java-study/tree/master/pratice03/src/main/java/prob03) 
-	4. [prob4]https://github.com/Ahhhhhhyeong/java-study/tree/master/pratice03/src/main/java/prob04) 
+	4. [prob4](https://github.com/Ahhhhhhyeong/java-study/tree/master/pratice03/src/main/java/prob04) 
 	5. [prob5](https://github.com/Ahhhhhhyeong/java-study/tree/master/pratice03/src/main/java/prob05) 
 
 ### practice04

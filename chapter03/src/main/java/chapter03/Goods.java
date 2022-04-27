@@ -1,10 +1,17 @@
 package chapter03;
 
+import javax.print.DocFlavor.BYTE_ARRAY;
+
 public class Goods {
+	public static int countOfGoods;
 	private String name;
 	private int price;
 	private int countStock;
 	private int countSold;
+	
+	public Goods() {
+		Goods.countOfGoods+=1;
+	}
 	
 	public String getName() {
 		return name;
@@ -35,5 +42,16 @@ public class Goods {
 		this.countSold = countSold;
 	}
 	
-	
+	public void showInfo() {
+		System.out.println(
+				"nameL "+ name 
+				+ ", price: " + price
+				+ ", countStock: " + countStock
+				+ ", countSold: " + countSold);
+	}
+
+	public int calcDiscountPrice(double discountrate) {
+		
+		return (int)(discountrate * price);
+	}
 }
