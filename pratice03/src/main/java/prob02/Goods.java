@@ -1,35 +1,44 @@
 package prob02;
 
 public class Goods {
-	private static String goods;
-	private static int price;
-	private static int count;
-
-	public static String getGoods() {
-		return goods;
+	private String name;
+	private int price;
+	private int count;
+	
+	public Goods(String name, int price, int count) {
+		this.name = name;
+		this.price = price;
+		this.count = count;
 	}
 
-	public static void setGoods(String goods) {
-		Goods.goods = goods;
+	public String getName() {
+		return name;
 	}
 
-	public static int getPrice() {
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getPrice() {
 		return price;
 	}
 
-	public static void setPrice(int price) {
-		Goods.price = price;
+	public void setPrice(int price) {
+		this.price = price;
 	}
 
-	public static int getCount() {
+	public int getCount() {
 		return count;
 	}
 
-	public static void setCount(int count) {
-		Goods.count = count;
+	public void setCount(int count) {
+		this.count = count;
 	}
 	
-	public static void callGoods() {
-		System.out.println(goods+"(가격:" + price +"원)이 " + count + "개 입고 되었습니다.");
+	public void showGoods() {
+		System.out.println(name + "(가격:" 
+							+ price + "원)이 " 
+							+ count + "개 입고 되었습니다.");
 	}
+	
 }
