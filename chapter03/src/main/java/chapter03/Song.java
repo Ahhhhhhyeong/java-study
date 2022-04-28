@@ -1,5 +1,6 @@
 package chapter03;
 
+
 public class Song {
 	private String title;
 	private String artist;
@@ -7,7 +8,23 @@ public class Song {
 	private String composer;
 	private int year;
 	private int track;
-	
+
+	public Song(String title, String artist, String album, 
+				String composer, int year, int track) {
+		//
+		this.title = title;
+		this.artist = artist;
+		this.album = album;
+		this.composer = composer;
+		this.year = year;
+		this.track = track;
+	}
+
+	public Song(String title, String artist) {
+		//this.title = title;
+		//this.artist = artist;
+		this(title, artist, null, null, 0, 0);
+	}
 
 	public String getTitle() {
 		return title;
@@ -38,11 +55,11 @@ public class Song {
 	}
 
 	public void setArtist(String artist) {
-		this.artist = artist;		
+		this.artist = artist;
 	}
 
 	public void setAlbum(String album) {
-		this.album = album;		
+		this.album = album;
 	}
 
 	public void setComposer(String composer) {
@@ -54,19 +71,17 @@ public class Song {
 	}
 
 	public void setTrack(int track) {
-		this.track = track;		
+		this.track = track;
 	}
 
 	public void show() {
 		System.out.println(
-				artist + " " 
-				+ title +
-				" (" + album + 
-				", "+ year + 
-				", " + track +
-				", " + composer 
-				+ "번 track)");
-		
+						artist + " " 
+						+ title + " (" 
+						+ album + ", " + year + ", "
+						+ track + ", " 
+						+ composer + " 작곡, "+ track + "번)");
+
 	}
 
 }

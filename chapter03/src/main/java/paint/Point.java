@@ -4,6 +4,14 @@ public class Point {
 	private int x;
 	private int y;
 	
+	public Point() {
+	}
+	
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
 	public int getX() {
 		return x;
 	}
@@ -21,4 +29,12 @@ public class Point {
 		System.out.println("Draw point[x="+x+", y="+y+"]");
 	}
 	
+	public void show(boolean visable) {
+		if(visable) {
+			show();
+		} else {
+			System.out.println("Disapear point[x="+x+", y="+y+"]");
+		}
+	}
+
 }

@@ -10,7 +10,23 @@ public class Goods {
 	private int countSold;
 	
 	public Goods() {
+		//Goods.countOfGoods+=1;
+		this(null, 0, 0, 0);
+	}
+	
+	public Goods(String name) {
+		//Goods.countOfGoods+=1;
+		//this.name = name;
+		this(name, 0, 0, 0);
+	}
+	
+	public Goods(String name, int price, int countStock, int countSold) {
 		Goods.countOfGoods+=1;
+		
+		this.countSold = countSold;
+		this.name = name;
+		this.price = price;
+		this.countStock = countStock;
 	}
 	
 	public String getName() {
@@ -44,7 +60,7 @@ public class Goods {
 	
 	public void showInfo() {
 		System.out.println(
-				"nameL "+ name 
+				"name: "+ name 
 				+ ", price: " + price
 				+ ", countStock: " + countStock
 				+ ", countSold: " + countSold);
