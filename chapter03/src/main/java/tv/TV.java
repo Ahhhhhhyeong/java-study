@@ -5,6 +5,7 @@ public class TV {
 	private int volume;	  // 0 ~ 100 rotation
 	private boolean power;
 	
+
 	public TV(int channel, int volume, boolean power) {
 		this.channel = channel;
 		this.volume = volume;
@@ -23,10 +24,10 @@ public class TV {
 	}
 
 	public void volume(int volume) {
-		if(volume > 100) {
-			volume = 0;
-		} else if(volume < 0) {
+		if(volume < 0) {
 			volume = 100;
+		} else if (volume > 100) {
+			volume = 0;
 		}
 		this.volume = volume;		
 	}
@@ -36,13 +37,17 @@ public class TV {
 	}
 
 	public void channel(int channel) {
+		if(channel < 0) {
+			channel = 255;
+		} else if(channel > 255) {
+			channel = 0;
+		}
 		this.channel = channel;
 		
 	}
 
-	public void power(boolean b) {
-				
+	public void power(boolean power) {
+		this.power = power;
 	}
-
 	
 }

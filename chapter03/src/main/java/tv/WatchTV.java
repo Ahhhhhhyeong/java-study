@@ -1,6 +1,4 @@
-package chapter03;
-
-import tv.TV;
+package tv;
 
 public class WatchTV {
 

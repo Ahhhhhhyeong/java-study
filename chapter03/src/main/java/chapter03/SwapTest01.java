@@ -2,8 +2,6 @@ package chapter03;
 
 import javax.swing.plaf.multi.MultiInternalFrameUI;
 
-import tv.Value;
-
 public class SwapTest01 {
 
 	public static void main(String[] args) {

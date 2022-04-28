@@ -30,17 +30,18 @@ public class Main {
 		GraphicText graphicText =  new GraphicText("Hello World");
 		draw(graphicText);
 		
-		// instanceof 연산자 테스트
-		System.out.println(circle instanceof Object); // true
-		System.out.println(circle instanceof Shape); // true
-		System.out.println(circle instanceof Circle); // true
-		
-		// 오류: class는 Hierachy 상위와 하위만 instanceof 연산자를 사용할 수 있음
-		// System.out.println(circle instanceof Rectangle); // error
-		
-		// interface는 Hierachy와 상관없이 instanceof 연산자를 사용할 수 있음
-		System.out.println(circle instanceof Drawable); //true
-		System.out.println(circle instanceof Runnable);
+//		// instanceof 연산자 테스트
+//		System.out.println(circle instanceof Object); // true
+//		System.out.println(circle instanceof Shape); // true
+//		System.out.println(circle instanceof Circle); // true
+//		
+//		// 오류: class는 Hierachy 상위와 하위만 instanceof 연산자를 사용할 수 있음
+//		// System.out.println(circle instanceof Rectangle); // error
+//		
+//		// interface는 Hierachy와 상관없이 instanceof 연산자를 사용할 수 있음
+//		System.out.println(circle instanceof Drawable); //true
+//		System.out.println(circle instanceof Runnable); //false_확인은 가능함
+	
 	}
 	
 	public static void draw(Drawable drawable) {
