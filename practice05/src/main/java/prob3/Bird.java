@@ -10,4 +10,15 @@ public abstract class Bird {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	protected abstract void fly();
+
+	protected abstract void sing();
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+	
+	
 }

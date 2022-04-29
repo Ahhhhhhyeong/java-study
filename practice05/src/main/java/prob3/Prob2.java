@@ -13,5 +13,6 @@ public class Prob2 {
 		bird02.fly();
 		bird02.sing();
 		System.out.println( bird02 );
+		
 	}
 }
