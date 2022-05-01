@@ -23,7 +23,7 @@ public class MyStack {
 
 	public String pop() throws MyStackException{
 		if(top < 0){
-			throw new MyStackException("stack is empty");
+			throw new MyStackException();
 		}
 		String item = buffer[top];
 		buffer[top] = null;
