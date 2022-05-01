@@ -1,15 +1,11 @@
 package prob6;
 
-public class Shape {
+public abstract class Shape {
+	protected static double width;
+	protected static double height;
+	
+	public abstract double getArea();
 
-	public String getArea() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public String getPerimeter() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	public abstract double getPerimeter();
+	
 }
