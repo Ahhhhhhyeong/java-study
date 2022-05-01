@@ -8,18 +8,30 @@ public class MyStack {
 		buffer = new String[size];
 	}
 
-	public void push(String item) {
-		
-		
+	private void resize(){
+		if(top + 1 == buffer.length){
+			String[] newBuffer = new String[buffer.length * 2];
+			System.arraycopy(buffer, 0, newBuffer, 0, top);
+			buffer = newBuffer;
+		}
 	}
 
-	public String pop() {
-		
-		return null;
+	public void push(String item) {
+		resize();
+		buffer[++top] = item;		
+	}
+
+	public String pop() throws MyStackException{
+		if(top < 0){
+			throw new MyStackException("stack is empty");
+		}
+		String item = buffer[top];
+		buffer[top] = null;
+		top--;
+		return item;
 	}
 	
 	public boolean isEmpty() {		
-		return false;
+		return (top == 0);
 	}
-
 }
