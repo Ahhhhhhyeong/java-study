@@ -11,7 +11,7 @@ public class MyStack {
 	private void resize(){
 		if(top + 1 == buffer.length){
 			String[] newBuffer = new String[buffer.length * 2];
-			System.arraycopy(buffer, 0, newBuffer, 0, top);
+			System.arraycopy(buffer, 0, newBuffer, 0, top+1);
 			buffer = newBuffer;
 		}
 	}
@@ -22,7 +22,7 @@ public class MyStack {
 	}
 
 	public String pop() throws MyStackException{
-		if(top < 0){
+		if(top == 0){
 			throw new MyStackException();
 		}
 		String item = buffer[top];
