@@ -1,7 +1,5 @@
 package chapter04;
 
-import javax.swing.SwingConstants;
-
 public class StringTest03 {
 
 	public static void main(String[] args) {
