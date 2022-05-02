@@ -46,8 +46,15 @@ public class Gugudan {
 
 	private static int[] randomizeAnswers() {
 		/* 코드 작성(수정 가능) */
-		final int COUNT_ANSWER_NUMBER = 9;
-		int[] boardNumbers = new int[COUNT_ANSWER_NUMBER];
+		final int COUNT_ANSWER_NUMBER = 9;		
+		int[] boardNumbers = new int[COUNT_ANSWER_NUMBER];	
+		
+		for(int i = 0; i < COUNT_ANSWER_NUMBER; i++) {
+			int r = randomize(i+1, 1) * (i+1);
+			boardNumbers[i]= r; 
+		}
+		
+		
 		return boardNumbers;
 	}
 }
