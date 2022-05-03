@@ -6,22 +6,24 @@ public class Person {
 	private String name;
 	
 	/* 코드 작성 */
-	public Person(int i, String string) {
-		// TODO Auto-generated constructor stub
+	public Person(int age, String name) {
+		this.age = age;
+		this.name = name;
 	}
 
-	public Person(String string) {
-		// TODO Auto-generated constructor stub
+	public Person(String name) {
+		this.name = name;
+		age = 12;
 	}
 
 	public void selfIntroduce() {
-		// TODO Auto-generated method stub
+		System.out.println("내 이름은 " + name +"이며, 나이는 " + age +"입니다.");
 		
 	}
 
 	public static String getPopulation() {
-		// TODO Auto-generated method stub
-		return null;
+		++numberOfPerson;
+		return String.valueOf(numberOfPerson);
 	}
 	
 }
