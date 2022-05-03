@@ -14,8 +14,15 @@ public class BufferedOutputStreamTest {
 			FileOutputStream fos = new FileOutputStream("test.txt");
 			// 보조 스트림
 			bos = new BufferedOutputStream(fos);
+			
+			for(int i = 97; i <= 122; i++) {
+					bos.write(i);
+			}
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("Can't Open:" + e);
+		}catch (IOException e) {
+			System.out.println("Error:" + e);
 		} finally {
 			try {
 				if(bos != null) {
