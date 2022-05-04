@@ -37,20 +37,32 @@ public class LoginMain {
 	
 	public static void login(List<User> users, User user ) throws PasswordDismatchException, UserNotFoundException{
 		/* 코드 작성 */
-		
+		boolean idchk = false;
+		boolean passchk = false;
+				
 		// 아이디 체크
 		for(int i = 0; i < users.size(); i++) {
 			String id = users.get(i).getId();
-			if(!user.getId().equals(id)) {
-				throw new UserNotFoundException();
+			if(user.getId().equals(id)) {
+				idchk = true;
+				break;
 			}
 		}
 		// 비밀번호 체크
 		for(int i = 0; i < users.size(); i++) {
-			String pwd = users.get(i).getPassword();
-			if(!user.getPassword().equals(pwd)) {
-				throw new PasswordDismatchException();
+			String password = users.get(i).getPassword();	
+			String id = users.get(i).getId();
+			if(user.getPassword().equals(password)&&user.getId().equals(id)) {
+				passchk = true;
+				break;
 			}
+		}
+		
+		if(!idchk) {
+			throw new UserNotFoundException();
+		}
+		if(!passchk) {
+			throw new PasswordDismatchException();
 		}
 		
 	}
