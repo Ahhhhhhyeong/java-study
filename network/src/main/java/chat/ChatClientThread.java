@@ -2,7 +2,6 @@ package chat;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
@@ -16,9 +15,7 @@ public class ChatClientThread extends Thread {
 
 	@Override
 	public void run() {
-		InputStream inputStream;
 		try {
-			inputStream = socket.getInputStream();
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
 			while(true) {

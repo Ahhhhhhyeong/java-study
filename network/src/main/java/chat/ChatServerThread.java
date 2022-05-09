@@ -82,11 +82,12 @@ public class ChatServerThread extends Thread {
 		addWriter(writer);
 		
 		//ack
-		writer.println("join:ok");
+		writer.println("입장하셨습니다. 즐거운 채팅되세요~");
 		writer.flush();
 	}
 
 	private void addWriter(Writer writer) { 
+		System.out.println("<<");
 		synchronized (listWriters) { //synchronized  키워드는  여러 스레드가  하나의 공유 객체에 접근할  때,  동기화를 보장 해준다
 			listWriters.add(writer);
 		}
