@@ -57,7 +57,7 @@ public class RequestHandler extends Thread {
 			} else {
 				// method: POST, PUT, DELETE, HEAD, CONNECT
 				// SimpleHttpServer에서는 무시(400 Bad Request 응답)
-				response400Error(outputStream, tokens[1], tokens[2]);
+				response400Error(outputStream, tokens[1], tokens[2]); 
 				
 			}
 			
@@ -115,12 +115,11 @@ public class RequestHandler extends Thread {
 		 */
 		File file = new File("./webapp/error/400.html");
 		
-		outputStream.write((protocol +"Bad Request\r\n").getBytes("UTF-8"));
+		outputStream.write((protocol +" 400 Bad Request\r\n").getBytes("UTF-8"));
 		outputStream.write("Content-Type: text/html; charset=utf-8\r\n".getBytes("UTF-8"));
 		outputStream.write("\r\n".getBytes());
 		outputStream.write(Files.readAllBytes(file.toPath()));
 		
-
 	}
 	
 	private void response404Response(OutputStream outputStream, String url, String protocol) throws IOException {
@@ -132,7 +131,7 @@ public class RequestHandler extends Thread {
 		 */
 		File file = new File("./webapp/error/404.html");
 		
-		outputStream.write((protocol+" File Not Found\n").getBytes("UTF-8"));
+		outputStream.write((protocol+" 404 File Not Found\n").getBytes("UTF-8"));
 		outputStream.write("Content-Type: text/html; charset=utf-8\r\n".getBytes("UTF-8"));
 		outputStream.write("\r\n".getBytes());
 		outputStream.write(Files.readAllBytes(file.toPath()));

@@ -22,10 +22,12 @@ public class EchoClient {
 		try {
 			scanner = new Scanner(System.in);
 			
+
 			socket = new Socket();
 
 			socket.connect(new InetSocketAddress(SERVER_IP, SERVER_PORT));
 			log("connected");
+		
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true);
