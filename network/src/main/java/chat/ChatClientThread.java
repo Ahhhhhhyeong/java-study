@@ -22,7 +22,7 @@ public class ChatClientThread extends Thread {
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
 			while(true) {
-				System.out.println("<<" + reader.readLine());
+				System.out.println( reader.readLine());
 			}
 		} catch (IOException e) {
 			System.out.println("Error: " + e);

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatServerThread extends Thread {
-	public static String nickname;
+	private String nickname;
 	private Socket socket;
 	List<Writer> listWriters;
 	
@@ -49,7 +49,7 @@ public class ChatServerThread extends Thread {
 				if("join".equals(tokens[0])) {
 					doJoin(tokens[1], printWriter);
 				} else if("message".equals(tokens[0])) {
-					doMessage(tokens[1]);
+					doMessage(tokens[1], printWriter);
 				}else if("quit".equals(tokens[0])) {
 					doQuit(printWriter);
 				}else {
@@ -66,8 +66,8 @@ public class ChatServerThread extends Thread {
 
 	
 
-	private void doMessage(String message) {
-		String data = message;
+	private void doMessage(String message, PrintWriter writer) {
+		String data = nickname + ">>" +  message;
 		broadcast(data);
 	}
 
