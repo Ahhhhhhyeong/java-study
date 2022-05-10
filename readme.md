@@ -4,10 +4,12 @@
 * [객체지향 프로그래밍 수업 예제](https://github.com/Ahhhhhhyeong/java-study/tree/master/chapter03/src/main/java/chapter03)
 
 ### chapter04
-* Java API(java.lang.*, java.util.* , java.io.*) 수업 예제
+* [Java API(java.lang.*, java.util.* , java.io.*) 수업 예제](https://github.com/Ahhhhhhyeong/java-study/tree/master/chapter04/src/main/java)
 
 ### Network
-* Java 네트워크 프로그래밍 수업 예제
+* [Java 네트워크 프로그래밍 수업 예제](https://github.com/Ahhhhhhyeong/java-study/tree/master/network/src/main/java)
+* [CLI 기반 채팅과제](https://github.com/Ahhhhhhyeong/java-study/tree/master/network/src/main/java/chat)
+* [GUI 기반 채팅과제](/)
 
 ### practice01
 * Java 기본 프로그래밍 연습문제1
