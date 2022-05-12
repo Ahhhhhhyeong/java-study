@@ -47,7 +47,10 @@ public class ChatClient {
 				//System.out.print(">>");
 				String input = scanner.nextLine();
 				
-				if("quit".equals(input)) {
+				if("".equals(input)) {
+					printWriter.println("null:");
+					printWriter.flush();
+				}else if("quit".equals(input)) {
 					printWriter.println("quit:");
 					printWriter.flush();
 					break;

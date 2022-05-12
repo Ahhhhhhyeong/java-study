@@ -159,8 +159,9 @@ public class ChatWindow {
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
 				while(true) {
-					updateTextArea(reader.readLine());
-					System.out.println( reader.readLine());
+					String msg = reader.readLine();
+					updateTextArea(msg);
+					System.out.println(msg);
 				}
 			} catch (IOException e) {
 				System.out.println("Error: " + e);

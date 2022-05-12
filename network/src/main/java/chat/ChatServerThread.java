@@ -52,6 +52,8 @@ public class ChatServerThread extends Thread {
 					doMessage(tokens[1], printWriter);
 				}else if("quit".equals(tokens[0])) {
 					doQuit(printWriter);
+				}else if("null".equals(tokens[0])) {
+					log("채팅을 입력해주세요");
 				}else {
 					log("ERROR!! 알 수 없는 요청(" + tokens[0] + ")");
 				}
