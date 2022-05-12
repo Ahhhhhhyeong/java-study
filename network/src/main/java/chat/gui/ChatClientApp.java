@@ -17,12 +17,10 @@ public class ChatClientApp {
 	public static void main(String[] args) {
 		String name = null;
 		Scanner scanner = new Scanner(System.in);
-		//List<Writer> listWriters = new ArrayList<Writer>();
-		
-		
+
 		Socket socket = new Socket();
 		ChatServer.main(args);
-		
+
 		while (true) {
 
 			System.out.println("대화명을 입력하세요.");
@@ -37,7 +35,7 @@ public class ChatClientApp {
 		}
 
 		scanner.close();
-		
+
 		// 1. create socket
 		// 2. connect server
 		// 3. get iostream(pipline established)
@@ -53,7 +51,7 @@ public class ChatClientApp {
 			System.out.print("nickname:" + name);
 			printWriter.println("join:" + name);
 			printWriter.flush();
-			
+
 			new ChatWindow(name, socket).show();
 
 		} catch (IOException e) {
@@ -69,7 +67,6 @@ public class ChatClientApp {
 			}
 		}
 
-		
 	}
 
 }

@@ -50,7 +50,7 @@ public class ChatWindow {
 		buttonSend.setBackground(Color.GRAY);
 		buttonSend.setForeground(Color.WHITE);
 		buttonSend.addActionListener((ActionEvent actionEvent) -> {
-			if(textField.getText().equals("")) {
+			if (textField.getText().equals("")) {
 				return;
 			}
 			sendMessage();
@@ -63,7 +63,7 @@ public class ChatWindow {
 			public void keyPressed(KeyEvent e) {
 				char keyCode = e.getKeyChar();
 				if (keyCode == KeyEvent.VK_ENTER) {
-					if(textField.getText().equals("")) {
+					if (textField.getText().equals("")) {
 						return;
 					}
 					sendMessage();
@@ -93,7 +93,7 @@ public class ChatWindow {
 		/**
 		 * 2. IOStream (Pipeline established)
 		 */
-		IOStream();			
+		IOStream();
 
 		/**
 		 * 3. Chat Client Thread 생성하고 실행
@@ -102,7 +102,7 @@ public class ChatWindow {
 		chatClientThread.run();
 	}
 
-	public void IOStream() { 
+	public void IOStream() {
 		/// IOStream (Pipeline established) 통신 초기화
 		try {
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
@@ -111,7 +111,7 @@ public class ChatWindow {
 			textArea.append("접속 실패");
 			System.out.println("접속 실패" + e);
 			System.exit(1);
-		}	
+		}
 	}
 
 	protected void finish() {
@@ -122,16 +122,16 @@ public class ChatWindow {
 
 	private void sendMessage() {
 		String message = textField.getText();
-		while(true) {
-			pw.println("message:"+message);
-			pw.flush();	
+		while (true) {
+			pw.println("message:" + message);
+			pw.flush();
 			textField.setText("");
 			textField.requestFocus();
 
 //			// Chat Client Thread에서 서버로 부터 받은 메세지가 있다고 치고(가짜데이터
 //			updateTextArea("[" + name + "]:" + message);
 			return;
-		}			
+		}
 
 	}
 
@@ -148,24 +148,25 @@ public class ChatWindow {
 
 	private class ChatClientThread extends Thread {
 		private Socket socket;
-		
+
 		public ChatClientThread(Socket socket) {
 			this.socket = socket;
 		}
+
 		@Override
 		public void run() {
 			try {
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
-				while(true) {
+				while (true) {
 					String msg = reader.readLine();
 					updateTextArea(msg);
 					System.out.println(msg);
 				}
 			} catch (IOException e) {
 				System.out.println("Error: " + e);
-			}			
+			}
 		}
-		
+
 	}
 }
